@@ -7,6 +7,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import Loader from './Loader';
+import { createFeedbackEntry } from '../lib/feedbackStore';
 
 const CreateFeedback = ({ isConnected }) => {
   const [feedbackText, setFeedbackText] = useState('');
@@ -40,8 +41,8 @@ const CreateFeedback = ({ isConnected }) => {
       // const signedTx = await signTransaction(tx.toXDR(), "TESTNET");
       // await submitTransaction(signedTx);
 
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      const generatedId = Math.floor(Math.random() * 1000) + 1;
+      await new Promise((resolve) => setTimeout(resolve, 900));
+      const generatedId = createFeedbackEntry(feedbackText.trim());
 
       setSuccessId(generatedId);
       setFeedbackText('');

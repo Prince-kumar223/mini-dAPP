@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AlertCircle, LoaderCircle, Search, Sparkles } from 'lucide-react';
 import Loader from './Loader';
 import FeedbackDisplay from './FeedbackDisplay';
+import { getFeedbackEntry } from '../lib/feedbackStore';
 
 const GetFeedback = () => {
   const [feedbackId, setFeedbackId] = useState('');
@@ -35,8 +36,13 @@ const GetFeedback = () => {
       // const result = await contract.call("get_feedback", id);
       // const feedbackText = result.toString();
 
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      const feedbackText = 'This is a mock feedback from the blockchain for ID: ' + id;
+      await new Promise((resolve) => setTimeout(resolve, 700));
+      const feedbackText = getFeedbackEntry(id);
+
+      if (!feedbackText) {
+        setError('Feedback not found. Try creating a new entry first.');
+        return;
+      }
 
       setFeedbackData({ id, text: feedbackText });
       setCache((prevCache) => ({ ...prevCache, [id]: feedbackText }));
