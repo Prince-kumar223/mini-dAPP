@@ -145,7 +145,11 @@ For the submission screenshot requirement, take a screenshot of the terminal aft
 See [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for the final pre-submit checklist.
 
 ## SUBMISSION REQUIREMENTS:-
-## DEMO VIDEO LINK:- <video controls src="Stellar_lvl_3_demo_video.mp4" title="Title"></video>
+
+## DEMO VIDEO LINK:- https://youtu.be/aB2SG5ilkYg?si=oYdSYFs9Y0-9sESs
+
+ ## <video controls src="Stellar_lvl_3_demo_video.mp4" title="Title"></video>
+
 ## DEPLOYED LINK :- https://mini-d-app-red.vercel.app/
 ## Screenshot: test output showing 3+ tests passing:-
 ![alt text](<Screenshot 2026-04-26 230602.png>)
