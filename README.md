@@ -9,6 +9,8 @@ A mini decentralized application built with a React/Vite frontend and a Stellar 
 - GitHub repository: TODO - add your public GitHub repository URL
 - Test output evidence: [docs/test-output.md](docs/test-output.md)
 
+## NOTE :- FOR DEMO AND DEMO VIDEO LINK , SCREENSHORT GO TO THE LAST PLEASE.
+
 ## Features
 
 - Connect Freighter wallet and display connected account details.
@@ -141,3 +143,9 @@ For the submission screenshot requirement, take a screenshot of the terminal aft
 ## Submission Checklist
 
 See [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for the final pre-submit checklist.
+
+## SUBMISSION REQUIREMENTS:-
+## DEMO VIDEO LINK:- <video controls src="Stellar_lvl_3_demo_video.mp4" title="Title"></video>
+## DEPLOYED LINK :- https://mini-d-app-red.vercel.app/
+## Screenshot: test output showing 3+ tests passing:-
+![alt text](<Screenshot 2026-04-26 230602.png>)
