@@ -1,9 +1,9 @@
-import { Contract, TransactionBuilder, Networks, SorobanRpc, xdr, Account } from '@stellar/stellar-sdk';
+import { Contract, TransactionBuilder, Networks, rpc, xdr, Account } from '@stellar/stellar-sdk';
 import { signTransaction } from '@stellar/freighter-api';
 
 const CONTRACT_ID = 'CC5QE55YEBMFBHBKPIA3FNWWE3AOUPCAMWHUYBUWDGSLWVLRTOTMMS6I'; // Replace with your deployed contract ID
 
-const server = new SorobanRpc.Server('https://soroban-testnet.stellar.org');
+const server = new rpc.Server('https://soroban-testnet.stellar.org');
 
 export const createFeedbackEntry = async (text, walletAddress) => {
   const contract = new Contract(CONTRACT_ID);
