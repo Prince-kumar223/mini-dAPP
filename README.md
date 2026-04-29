@@ -4,9 +4,9 @@ A mini decentralized application built with a React/Vite frontend and a Stellar 
 
 ## Live Links
 
-- Live demo: TODO - add your Vercel, Netlify, or similar deployment URL
-- Demo video: TODO - add your 1-minute walkthrough video URL
-- GitHub repository: TODO - add your public GitHub repository URL
+- Live demo: https://mini-d-app-red.vercel.app/
+- Demo video: https://youtu.be/aB2SG5ilkYg?si=oYdSYFs9Y0-9sESs
+- GitHub repository: https://github.com/Prince-kumar223/mini-dAPP
 - Test output evidence: [docs/test-output.md](docs/test-output.md)
 
 ## NOTE :- FOR DEMO AND DEMO VIDEO LINK , SCREENSHORT GO TO THE LAST PLEASE.

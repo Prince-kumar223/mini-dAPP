@@ -6,10 +6,12 @@ import GetFeedback from './components/GetFeedback';
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
+  const [walletAddress, setWalletAddress] = useState('');
 
   const handleConnect = (pubKey) => {
     if (pubKey) {
       setIsConnected(true);
+      setWalletAddress(pubKey);
     }
   };
 
@@ -70,7 +72,7 @@ function App() {
         <main className="grid gap-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
           <div className="space-y-6">
             <WalletConnect onConnect={handleConnect} />
-            <CreateFeedback isConnected={isConnected} />
+            <CreateFeedback isConnected={isConnected} walletAddress={walletAddress} />
           </div>
 
           <div>

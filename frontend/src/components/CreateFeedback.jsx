@@ -9,7 +9,7 @@ import {
 import Loader from './Loader';
 import { createFeedbackEntry } from '../lib/feedbackStore';
 
-const CreateFeedback = ({ isConnected }) => {
+const CreateFeedback = ({ isConnected, walletAddress }) => {
   const [feedbackText, setFeedbackText] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -33,16 +33,7 @@ const CreateFeedback = ({ isConnected }) => {
     setLoading(true);
 
     try {
-      // Real contract call logic would go here:
-      // import { Contract, xdr } from '@stellar/stellar-sdk';
-      // import { signTransaction } from '@stellar/freighter-api';
-      // const contract = new Contract(CONTRACT_ID);
-      // const tx = ... build transaction to call `create_feedback` ...
-      // const signedTx = await signTransaction(tx.toXDR(), "TESTNET");
-      // await submitTransaction(signedTx);
-
-      await new Promise((resolve) => setTimeout(resolve, 900));
-      const generatedId = createFeedbackEntry(feedbackText.trim());
+      const generatedId = await createFeedbackEntry(feedbackText.trim(), walletAddress);
 
       setSuccessId(generatedId);
       setFeedbackText('');

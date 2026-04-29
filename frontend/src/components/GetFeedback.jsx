@@ -30,16 +30,9 @@ const GetFeedback = () => {
     setLoading(true);
 
     try {
-      // Real contract call logic would go here:
-      // import { Contract, xdr } from '@stellar/stellar-sdk';
-      // const contract = new Contract(CONTRACT_ID);
-      // const result = await contract.call("get_feedback", id);
-      // const feedbackText = result.toString();
+      const feedbackText = await getFeedbackEntry(id);
 
-      await new Promise((resolve) => setTimeout(resolve, 700));
-      const feedbackText = getFeedbackEntry(id);
-
-      if (!feedbackText) {
+      if (!feedbackText || feedbackText === 'Feedback not found') {
         setError('Feedback not found. Try creating a new entry first.');
         return;
       }
